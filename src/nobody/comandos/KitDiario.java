@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
-import nobody.eventos.KitAPI;
-import nobody.eventos.Money;
-import nobody.main.Main;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
@@ -27,21 +23,25 @@ import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.util.Vector;
 
+import nobody.eventos.KitAPI;
+import nobody.eventos.Money;
+import nobody.main.Main;
+
 public class KitDiario implements Listener {
 
 	@SuppressWarnings("unused")
 	private static HashMap<String, Long> cooldown = new HashMap<String, Long>();
 
-	 public static ArrayList<String> XPDIARIOaladdin = new ArrayList<>();
-	 public static ArrayList<String> XPDIARIOwaterbender = new ArrayList<>();
-	 public static ArrayList<String> XPDIARIOfirebender = new ArrayList<>();
-	 public static ArrayList<String> kitdiraioironman = new ArrayList<>();
-	 public static ArrayList<String> XPDIARIOlumberjack = new ArrayList<>();
-	 public static ArrayList<String> XPDIARIOmerlin = new ArrayList<>();
-	 public static ArrayList<String> XPDIARIOkangaroo = new ArrayList<>();
-	 public static ArrayList<String> XPDIARIOgladiator = new ArrayList<>();
-	 public static ArrayList<String> XPDIARIOgrappler = new ArrayList<>();
-	 public static ArrayList<String> setandokit = new ArrayList<>();
+	public static ArrayList<String> XPDIARIOaladdin = new ArrayList<>();
+	public static ArrayList<String> XPDIARIOwaterbender = new ArrayList<>();
+	public static ArrayList<String> XPDIARIOfirebender = new ArrayList<>();
+	public static ArrayList<String> kitdiraioironman = new ArrayList<>();
+	public static ArrayList<String> XPDIARIOlumberjack = new ArrayList<>();
+	public static ArrayList<String> XPDIARIOmerlin = new ArrayList<>();
+	public static ArrayList<String> XPDIARIOkangaroo = new ArrayList<>();
+	public static ArrayList<String> XPDIARIOgladiator = new ArrayList<>();
+	public static ArrayList<String> XPDIARIOgrappler = new ArrayList<>();
+	public static ArrayList<String> setandokit = new ArrayList<>();
 
 	public static void playFirework(Location location, Color color, Player p) {
 		Firework firework = (Firework) location.getWorld().spawn(location, Firework.class);
@@ -76,53 +76,51 @@ public class KitDiario implements Listener {
 		ItemMeta vidrometa = vidro.getItemMeta();
 		vidrometa.setDisplayName("§7Sorteando seu XP...");
 		vidro.setItemMeta(vidrometa);
-		
-		final ItemStack vidro1 = new ItemStack(Material.STAINED_GLASS_PANE,1,(short)3);
+
+		final ItemStack vidro1 = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 3);
 		ItemMeta vidrometa1 = vidro.getItemMeta();
 		vidrometa.setDisplayName("§7Sorteando seu XP...");
 		vidro1.setItemMeta(vidrometa1);
 
-
-
 		final ItemStack espadademadeira = new ItemStack(Material.EXP_BOTTLE);
-		  ItemMeta espadademadeiraa = espadademadeira.getItemMeta();
-		  espadademadeiraa.setDisplayName("§7• §7100§7 de XP §7•");
-		  espadademadeira.setItemMeta(espadademadeiraa);
+		ItemMeta espadademadeiraa = espadademadeira.getItemMeta();
+		espadademadeiraa.setDisplayName("§7• §7100§7 de XP §7•");
+		espadademadeira.setItemMeta(espadademadeiraa);
 
-		  final ItemStack sopa = new ItemStack(Material.EXP_BOTTLE);
-		  ItemMeta sopaa = sopa.getItemMeta();
-		  sopaa.setDisplayName("§7• §7200§7 de XP §7•");
-		  sopa.setItemMeta(sopaa);
+		final ItemStack sopa = new ItemStack(Material.EXP_BOTTLE);
+		ItemMeta sopaa = sopa.getItemMeta();
+		sopaa.setDisplayName("§7• §7200§7 de XP §7•");
+		sopa.setItemMeta(sopaa);
 
-		  final ItemStack maçadourada = new ItemStack(Material.EXP_BOTTLE);
-		  ItemMeta maçadouradaa = maçadourada.getItemMeta();
-		  maçadouradaa.setDisplayName("§7• §7300§7 de XP §7•");
-		  maçadourada.setItemMeta(maçadouradaa);
+		final ItemStack maçadourada = new ItemStack(Material.EXP_BOTTLE);
+		ItemMeta maçadouradaa = maçadourada.getItemMeta();
+		maçadouradaa.setDisplayName("§7• §7300§7 de XP §7•");
+		maçadourada.setItemMeta(maçadouradaa);
 
-		  final ItemStack espadadepedra = new ItemStack(Material.EXP_BOTTLE);
-		  ItemMeta espadadepedraa = espadadepedra.getItemMeta();
-		  espadadepedraa.setDisplayName("§7• §7400§7 de XP §7•");
-		  espadadepedra.setItemMeta(espadadepedraa);
+		final ItemStack espadadepedra = new ItemStack(Material.EXP_BOTTLE);
+		ItemMeta espadadepedraa = espadadepedra.getItemMeta();
+		espadadepedraa.setDisplayName("§7• §7400§7 de XP §7•");
+		espadadepedra.setItemMeta(espadadepedraa);
 
-		  final ItemStack xp = new ItemStack(Material.EXP_BOTTLE);
-		  ItemMeta xpa = xp.getItemMeta();
-		  xpa.setDisplayName("§7• §7500§7 de XP §7•");
-		  xp.setItemMeta(xpa);
+		final ItemStack xp = new ItemStack(Material.EXP_BOTTLE);
+		ItemMeta xpa = xp.getItemMeta();
+		xpa.setDisplayName("§7• §7500§7 de XP §7•");
+		xp.setItemMeta(xpa);
 
-		  final ItemStack lumberjack = new ItemStack(Material.EXP_BOTTLE);
-		  ItemMeta lumberjacka = lumberjack.getItemMeta();
-		  lumberjacka.setDisplayName("§7• §7600§7 de XP §7•");
-		  lumberjack.setItemMeta(lumberjacka);
+		final ItemStack lumberjack = new ItemStack(Material.EXP_BOTTLE);
+		ItemMeta lumberjacka = lumberjack.getItemMeta();
+		lumberjacka.setDisplayName("§7• §7600§7 de XP §7•");
+		lumberjack.setItemMeta(lumberjacka);
 
-		  final ItemStack enderperal = new ItemStack(Material.EXP_BOTTLE);
-		  ItemMeta enderperala = enderperal.getItemMeta();
-		  enderperala.setDisplayName("§7• §7700§7 de XP §7•");
-		  enderperal.setItemMeta(enderperala);
-		  
-		  final ItemStack grappler = new ItemStack(Material.EXP_BOTTLE);
-		  ItemMeta grapplera = grappler.getItemMeta();
-		  grapplera.setDisplayName("§7• §7800§7 de XP §7•");
-		  grappler.setItemMeta(grapplera);
+		final ItemStack enderperal = new ItemStack(Material.EXP_BOTTLE);
+		ItemMeta enderperala = enderperal.getItemMeta();
+		enderperala.setDisplayName("§7• §7700§7 de XP §7•");
+		enderperal.setItemMeta(enderperala);
+
+		final ItemStack grappler = new ItemStack(Material.EXP_BOTTLE);
+		ItemMeta grapplera = grappler.getItemMeta();
+		grapplera.setDisplayName("§7• §7800§7 de XP §7•");
+		grappler.setItemMeta(grapplera);
 
 		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
 			public void run() {
@@ -248,14 +246,14 @@ public class KitDiario implements Listener {
 				jogador.getWorld().playSound(jogador.getLocation(), Sound.CLICK, 10F, 10F);
 			}
 		}, 200L);
-		
+
 		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
 			public void run() {
 				random.setItem(9, vidro1);
 				jogador.getWorld().playSound(jogador.getLocation(), Sound.CLICK, 10F, 10F);
 			}
 		}, 200L);
-		
+
 		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
 			public void run() {
 				random.setItem(4, vidro1);
@@ -324,7 +322,7 @@ public class KitDiario implements Listener {
 					jogador.sendMessage("§7[§6§l!§7] §7Você Ganhou §b 800§7 de XP!");
 					Money.addMoney(800, jogador);
 				}
-				}
+			}
 		}, 110L);
 		Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
 			public void run() {
@@ -339,35 +337,36 @@ public class KitDiario implements Listener {
 	public void aoInteragir(final PlayerInteractEvent evento) {
 		final Player jogador = evento.getPlayer();
 		if (KitAPI.getkit(jogador) == "Nenhum") {
-		if (jogador.getItemInHand().getType() == Material.EXP_BOTTLE) {
-			if ((evento.getAction() == Action.RIGHT_CLICK_AIR) || (evento.getAction() == Action.RIGHT_CLICK_BLOCK)) {
-				if (setandokit.contains(jogador.getName())) {
-					jogador.sendMessage("§6{§a§lXPDIARIO§6} Voce já recebeu seu Item!");
+			if (jogador.getItemInHand().getType() == Material.EXP_BOTTLE) {
+				if ((evento.getAction() == Action.RIGHT_CLICK_AIR)
+						|| (evento.getAction() == Action.RIGHT_CLICK_BLOCK)) {
+					if (setandokit.contains(jogador.getName())) {
+						jogador.sendMessage("§6{§a§lXPDIARIO§6} Voce já recebeu seu Item!");
+						evento.setCancelled(true);
+						return;
+					}
+
 					evento.setCancelled(true);
-					return;
+
+					Inventario(jogador);
+
+					playFirework(jogador.getLocation(), Color.RED, evento.getPlayer());
+					playFirework(jogador.getLocation(), Color.LIME, evento.getPlayer());
+					playFirework(jogador.getLocation(), Color.AQUA, evento.getPlayer());
+
+					setandokit.add(jogador.getName());
+
+					Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
+						public void run() {
+							playFirework(jogador.getLocation(), Color.ORANGE, evento.getPlayer());
+							playFirework(jogador.getLocation(), Color.GREEN, evento.getPlayer());
+							playFirework(jogador.getLocation(), Color.PURPLE, evento.getPlayer());
+						}
+					}, 20L);
+
 				}
 
-				evento.setCancelled(true);
-
-				Inventario(jogador);
-
-				playFirework(jogador.getLocation(), Color.RED, evento.getPlayer());
-				playFirework(jogador.getLocation(), Color.LIME, evento.getPlayer());
-				playFirework(jogador.getLocation(), Color.AQUA, evento.getPlayer());
-
-				setandokit.add(jogador.getName());
-
-				Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
-					public void run() {
-						playFirework(jogador.getLocation(), Color.ORANGE, evento.getPlayer());
-						playFirework(jogador.getLocation(), Color.GREEN, evento.getPlayer());
-						playFirework(jogador.getLocation(), Color.PURPLE, evento.getPlayer());
-					}
-				}, 20L);
-
 			}
-			
 		}
 	}
-}
 }

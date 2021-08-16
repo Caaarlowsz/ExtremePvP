@@ -1,6 +1,5 @@
 package nobody.eventos;
 
-
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,11 +13,12 @@ public class Quit implements Listener {
 		e.setQuitMessage(null);
 		p.setExp(0);
 	}
+
 	@EventHandler
 	public void morrer(PlayerDeathEvent e) {
 		Player p = e.getEntity();
 		e.setDeathMessage(null);
-	    KitAPI.RemoveKit(p);
+		KitAPI.RemoveKit(p);
 	}
 
 }

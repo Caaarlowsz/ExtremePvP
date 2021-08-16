@@ -1,6 +1,5 @@
 package nobody.minigames;
 
-public enum ListGames
-{
-  voidChallenge,  refillTest;
+public enum ListGames {
+	voidChallenge, refillTest;
 }

@@ -1,15 +1,15 @@
 package nobody.comandos;
 
-import nobody.eventos.MoneyRank;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import nobody.eventos.MoneyRank;
 
 public class KillsCMD implements CommandExecutor {
-	
+
 	public static boolean isNumeric(String str) {
 		try {
 			Integer.parseInt(str);
@@ -18,9 +18,8 @@ public class KillsCMD implements CommandExecutor {
 		}
 		return true;
 	}
-	
-	public boolean onCommand(CommandSender sender, Command cmd, String label,
-			String[] args) {
+
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player p = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("darkills")) {
 			if (!p.hasPermission("tk.darkills")) {
@@ -38,8 +37,10 @@ public class KillsCMD implements CommandExecutor {
 				if (isNumeric(args[1])) {
 					int KILLSs = Integer.parseInt(args[1]);
 					MoneyRank.addKills(KILLSs, target);
-					p.sendMessage("§6{§a§lKILLS§6} §eVocê deu ao player §c" + target.getName() + "§c " + KILLSs + "" + "§7KILLS");
-					target.sendMessage("§6{§a§lKILLS§6} §eVocê recebeu do player §c" + p.getName() + "§c " + KILLSs + "" + "§7KILLS");
+					p.sendMessage("§6{§a§lKILLS§6} §eVocê deu ao player §c" + target.getName() + "§c " + KILLSs + ""
+							+ "§7KILLS");
+					target.sendMessage("§6{§a§lKILLS§6} §eVocê recebeu do player §c" + p.getName() + "§c " + KILLSs + ""
+							+ "§7KILLS");
 
 				}
 			}
@@ -47,5 +48,3 @@ public class KillsCMD implements CommandExecutor {
 		return false;
 	}
 }
-
-	

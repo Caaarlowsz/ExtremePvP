@@ -1,16 +1,15 @@
 package nobody.comandos;
 
-import nobody.eventos.Money;
-
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import nobody.eventos.Money;
 
 public class XPCmd implements CommandExecutor {
-	
+
 	public static boolean isNumeric(String str) {
 		try {
 			Integer.parseInt(str);
@@ -19,9 +18,8 @@ public class XPCmd implements CommandExecutor {
 		}
 		return true;
 	}
-	
-	public boolean onCommand(CommandSender sender, Command cmd, String label,
-			String[] args) {
+
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player p = (Player) sender;
 		if (cmd.getName().equalsIgnoreCase("xp")) {
 			if (!p.hasPermission("tk.xp")) {
@@ -39,12 +37,14 @@ public class XPCmd implements CommandExecutor {
 				if (isNumeric(args[1])) {
 					int xps = Integer.parseInt(args[1]);
 					Money.addMoney(xps, target);
-					p.sendMessage("§6{§a§lXP§6} §eVocê deu ao player §c" + target.getName() + "§c " + xps + "" + "§7XP");
-					target.sendMessage("§6{§a§lXP§6} §eVocê recebeu do player §c" + p.getName() + "§c " + xps + "" + "§7XP");
+					p.sendMessage(
+							"§6{§a§lXP§6} §eVocê deu ao player §c" + target.getName() + "§c " + xps + "" + "§7XP");
+					target.sendMessage(
+							"§6{§a§lXP§6} §eVocê recebeu do player §c" + p.getName() + "§c " + xps + "" + "§7XP");
 
 				}
 			}
 		}
 		return false;
 	}
-     }
+}

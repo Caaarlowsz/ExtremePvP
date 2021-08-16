@@ -1,22 +1,19 @@
 package nobody.comandos;
 
-import nobody.eventos.Money;
-
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import nobody.eventos.Money;
+
 public class Rank implements CommandExecutor {
 
-	  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
-	  {
-	    if (cmd.getName().equalsIgnoreCase("rank"))
-	    {
-	      Player p = (Player)sender;
-	      if (args.length == 0)
-	      {
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		if (cmd.getName().equalsIgnoreCase("rank")) {
+			Player p = (Player) sender;
+			if (args.length == 0) {
 				p.sendMessage("                                ");
 				p.sendMessage("                                ");
 				p.sendMessage("                                ");
@@ -81,11 +78,10 @@ public class Rank implements CommandExecutor {
 				p.sendMessage("§4✪ LEGENDARY: 2200");
 				p.sendMessage("§aSeu XP: " + Money.getMoney(p));
 				p.playSound(p.getLocation(), Sound.WOLF_HURT, 1.0F, 1.0F);
-	        return true;
-	      }
-	        }
-	      
-	    
+				return true;
+			}
+		}
+
 		return false;
-	  }
-	    }
+	}
+}
